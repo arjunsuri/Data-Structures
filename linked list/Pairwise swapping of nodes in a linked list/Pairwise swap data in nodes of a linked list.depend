@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1599900502 source:d:\code blocks\data structures and algos\linked list\singly linked list\pairwise swap data in nodes of a linked list\main.cpp
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+
