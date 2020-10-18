@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1473098184 source:f:\code blocks\data structures and algos\stack\check for balanced parenthesis\main.cpp
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+
