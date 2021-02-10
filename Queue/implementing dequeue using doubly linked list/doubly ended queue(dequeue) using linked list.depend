@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1612976920 source:d:\code blocks\data structures and algos\queue\doubly ended queue(dequeue) using linked list\main.cpp
+	<iostream>
+	<stdlib.h>
+
