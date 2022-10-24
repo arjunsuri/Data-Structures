@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1486924098 source:f:\code blocks\data structures and algos\hashing\check if a given array contains duplicate elements within k distance from each other\main.cpp
-	<iostream>
-	<map>
-
-1665215763 source:e:\code blocks\data structures and algos\hashing\check if a given array contains duplicate elements within k distance from each other\main.cpp
-	<bits/stdc++.h>
-
