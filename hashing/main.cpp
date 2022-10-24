@@ -1,44 +1,42 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include<map>
 
 using namespace std;
 
-bool isDuplicate(int arr[],int n,int k) {
+void count_elements(int arr[],int n,int k) {
 
-  set<int> duplicateSet;
+   map<int, int> dist_element;
+   int dist_count = 0;
 
-  for(int i=0; i<n; i++) {
-    if(duplicateSet.find(arr[i]) != duplicateSet.end()) {
-        return true;
-    }
-    duplicateSet.insert(arr[i]);
-    if(i >= k) {
-      duplicateSet.erase(arr[i-k]);
-    }
-  }
-  return false;
+   for(int i=0; i<k; i++) {
+     if(dist_element[arr[i]] == 0) {
+        dist_count++;
+     }
+     dist_element[arr[i]]++;
+   }
+
+   cout<< dist_count << endl;
+   for(int i=k; i<n; i++) {
+     if(dist_element[arr[i-k]] == 1) {
+        dist_count--;
+     }
+     dist_element[arr[i-k]]--;
+
+     if(dist_element[arr[i]] == 0) {
+       dist_count++;
+     }
+     dist_element[arr[i]]++;
+     cout << dist_count << endl;
+   }
 }
 
-int main()
-{
-    int arr[20];
-    int n;
-    cout<<"\nenter the size of array";
-    cin>>n;
+int main() {
+    int arr[]={1,2,1,3,4,2,3,3};
+    int n=7;
+    int k=4;
 
-    for(int i=0;i<n;i++) {
-      cin>>arr[i];
-    }
-
-    int k;
-    cout<<"enter value of k";
-    cin>>k;
-
-    if(isDuplicate(arr,n,k)) {
-        cout<<"\nThere is a duplicate under k distance in the array";
-    }
-    else {
-        cout<<"\nAll duplicates are more than k distance in the array";
-    }
+    cout<<"\ndistinct elements in every window of size k:-"<<endl;
+    count_elements(arr,n,k);
 
     return 0;
 }
