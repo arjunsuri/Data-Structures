@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1487424120 source:f:\code blocks\data structures and algos\hashing\ find a,b,c,d in array such that a+b = c+d(extended for duplicates in array)\main.cpp
+	<iostream>
+	<map>
+
